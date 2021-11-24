@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Tambah Kader Baru</title>
+</head>
+<body>
+<div align="center">
+    <h1>Tambah Kader Baru</h1>
+    <br/>
+    <form action="#" th:action="@{/save}" th:object="${product}" method="post">
+        <table border="0" cellpadding="10">
+            <tr>
+                <td>Nama Lengkap:</td>
+                <td><input type="text" th:field="*{nama_lengkap}" /></td>
+            </tr>
+            <tr>
+                <td>Tempat Lahir:</td>
+                <td><input type="text" th:field="*{tempat_lahir}" /></td>
+            </tr>
+            <tr>
+                <td>Tanggal Lahir:</td>
+                <td><input type="text" th:field="*{tenggal_lahir}" /></td>
+            </tr>
+            <tr>
+                <td>RT/RW/Dusun:</td>
+                <td><input type="text" th:field="*{RT_RW_Dusun}" /></td>
+            </tr>
+            <tr>
+                <td>Desa:</td>
+                <td><input type="text" th:field="*{desa}" /></td>
+            </tr>
+            <tr>
+                <td>Kecamatan:</td>
+                <td><input type="text" th:field="*{kecamatan}" /></td>
+            </tr>
+            <tr>
+                <td>Kabupaten:</td>
+                <td><input type="text" th:field="*{kabupaten}" /></td>
+            </tr>
+            <tr>
+                <td>Provinsi:</td>
+                <td><input type="text" th:field="*{provinsi}" /></td>
+            </tr>
+            <tr>
+                <td>Golongan Darah:</td>
+                <td><input type="text" th:field="*{golongan_darah}" /></td>
+            </tr>
+            <tr>
+                <td>Kode Pos:</td>
+                <td><input type="text" th:field="*{kode_pos}" /></td>
+            </tr>
+            <tr>
+                <td>NIK:</td>
+                <td><input type="text" th:field="*{nik}" /></td>
+            </tr>
+            <tr>
+                <td>Nomor HP:</td>
+                <td><input type="text" th:field="*{no_hp}" /></td>
+            </tr>
+            <tr>
+                <td>Email:</td>
+                <td><input type="text" th:field="*{email}" /></td>
+            </tr>
+            <tr>
+                <td>Nama Ayah:</td>
+                <td><input type="text" th:field="*{namaayah}" /></td>
+            </tr>
+            <tr>
+                <td>Pekerjaan Ayah:</td>
+                <td><input type="text" th:field="*{pekerjaanayah}" /></td>
+            </tr>
+            <tr>
+                <td>Nama Ibu:</td>
+                <td><input type="text" th:field="*{namaibu}" /></td>
+            </tr>
+            <tr>
+                <td>Pekerjaan Ibu:</td>
+                <td><input type="text" th:field="*{pekerjaanibu}" /></td>
+            </tr>
+            <tr>
+                <td>SD/MI:</td>
+                <td><input type="text" th:field="*{sdmi}" /></td>
+            </tr>
+            <tr>
+                <td>SMP/MTS:</td>
+                <td><input type="text" th:field="*{smpmts}" /></td>
+            </tr>
+            <tr>
+                <td>SMK/SMA:</td>
+                <td><input type="text" th:field="*{smasmk}" /></td>
+            </tr>
+            <tr>
+                <td>S1:</td>
+                <td><input type="text" th:field="*{s1}" /></td>
+            </tr>
+            <tr>
+                <td>S2:</td>
+                <td><input type="text" th:field="*{s2}" /></td>
+            </tr>
+            <tr>
+                <td>Keahlian 1:</td>
+                <td><input type="text" th:field="*{keahliansatu}" /></td>
+            </tr>
+            <tr>
+                <td>Keahlian 2:</td>
+                <td><input type="text" th:field="*{keahliandua}" /></td>
+            </tr>
+            <tr>
+                <td>Prestasi 1:</td>
+                <td><input type="text" th:field="*{prestasisatu}" /></td>
+            </tr>
+            <tr>
+                <td>Prestasi 2:</td>
+                <td><input type="text" th:field="*{prestasidua}" /></td>
+            </tr>
+            <tr>
+                <td>Prestasi 3:</td>
+                <td><input type="text" th:field="*{prestasitiga}" /></td>
+            </tr>
+            <tr>
+                <td>Penyelanggara Makesta:</td>
+                <td><input type="text" th:field="*{penyelenggaramakesta}" /></td>
+            </tr>
+            <tr>
+                <td>Tahun Makesta:</td>
+                <td><input type="text" th:field="*{tahunmakesta}" /></td>
+            </tr>
+            <tr>
+                <td>Sertifikat Makesta:</td>
+                <td><input type="text" th:field="*{sertifikatmakesta}" /></td>
+            </tr>
+            <tr>
+                <td>Penyelanggara Lakmud:</td>
+                <td><input type="text" th:field="*{penyelenggaralakmud}" /></td>
+            </tr>
+            <tr>
+                <td>Tahun Lakmud:</td>
+                <td><input type="text" th:field="*{tahunlakmud}" /></td>
+            </tr>
+            <tr>
+                <td>Sertifikat Lakmud:</td>
+                <td><input type="text" th:field="*{sertifikatlakmud}" /></td>
+            </tr>
+            <tr>
+                <td>Penyelanggara Lakut:</td>
+                <td><input type="text" th:field="*{penyelenggaralakut}" /></td>
+            </tr>
+            <tr>
+                <td>Tahun Lakut:</td>
+                <td><input type="text" th:field="*{tahunlakut}" /></td>
+            </tr>
+            <tr>
+                <td>Sertifikat Lakut:</td>
+                <td><input type="text" th:field="*{sertifikatlakut}" /></td>
+            </tr>
+            <tr>
+                <td>Penyelenggara Latin:</td>
+                <td><input type="text" th:field="*{penyelenggaralatin}" /></td>
+            </tr>
+            <tr>
+                <td>Tahun Latin:</td>
+                <td><input type="text" th:field="*{tahunlatin}" /></td>
+            </tr>
+            <tr>
+                <td>Sertifikat Latin:</td>
+                <td><input type="text" th:field="*{sertifikatlatin}" /></td>
+            </tr>
+            <tr>
+                <td>Penyelenggara Diklatama:</td>
+                <td><input type="text" th:field="*{penyelenggaradiklatama}" /></td>
+            </tr>
+            <tr>
+                <td>Tahun Diklatama:</td>
+                <td><input type="text" th:field="*{tahundiklatama}" /></td>
+            </tr>
+            <tr>
+                <td>Sertifikat Dikatama:</td>
+                <td><input type="text" th:field="*{sertifikatdiklatama}" /></td>
+            </tr>
+            <tr>
+                <td>Penyelenggara Diklatmad:</td>
+                <td><input type="text" th:field="*{penyelenggaradiklatmad}" /></td>
+            </tr>
+            <tr>
+                <td>Tahun Diklatmad:</td>
+                <td><input type="text" th:field="*{tahundikalmad}" /></td>
+            </tr>
+            <tr>
+                <td>Sertifikat Diklatmad:</td>
+                <td><input type="text" th:field="*{sertifikatdiklatmad}" /></td>
+            </tr>
+            <tr>
+                <td>Penyelanggara Pelatihan:</td>
+                <td><input type="text" th:field="*{penyelenggarapelatihan}" /></td>
+            </tr>
+            <tr>
+                <td>Nama Pelatihan:</td>
+                <td><input type="text" th:field="*{namapelatihan}" /></td>
+            </tr>
+            <tr>
+                <td>Tahun Pelatihan:</td>
+                <td><input type="text" th:field="*{tahunpelatihan}" /></td>
+            </tr>
+            <tr>
+                <td>Sertifikat Pelatihan:</td>
+                <td><input type="text" th:field="*{sertifikatpelatihan}" /></td>
+            </tr>
+            <tr>
+                <td>Penyelenggara Pelatihan:</td>
+                <td><input type="text" th:field="*{penyelenggarapelatihan2}" /></td>
+            </tr>
+            <tr>
+                <td>Nama Pelatihan:</td>
+                <td><input type="text" th:field="*{namapelatihan2}" /></td>
+            </tr>
+            <tr>
+                <td>Tahun Pelatihan:</td>
+                <td><input type="text" th:field="*{tahunpelatihan2}" /></td>
+            </tr>
+            <tr>
+                <td>Sertifikat Pelatihan:</td>
+                <td><input type="text" th:field="*{sertifikatpelatihan2}" /></td>
+            </tr>
+            <tr>
+                <td colspan="2"><button type="submit">Save</button></td>
+            </tr>
+        </table>
+    </form>
+</div>
+</body>
+</html>

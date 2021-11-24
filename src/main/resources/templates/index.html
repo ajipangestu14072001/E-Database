@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>E-Database Organisasi</title>
+</head>
+<body>
+<div align="center">
+    <div sec:authorize="isAuthenticated()">
+        Selamat Datang <b><span sec:authentication="name">Username</span></b>
+        &nbsp;
+        <i><span sec:authentication="principal.authorities">Roles</span></i>
+    </div>
+
+    <form th:action="@{/logout}" method="post">
+        <input type="submit" value="Logout" />
+    </form>
+
+    <h1>E-Database Organisasi</h1>
+    <div sec:authorize="hasAnyAuthority('CREATOR', 'ADMIN')">
+        <a href="new">Tambah Kader</a>
+    </div>
+
+    <br/><br/>
+    <table border="1" cellpadding="10">
+        <thead>
+        <tr>
+            <th>No</th>
+            <th>Nama Lengkap</th>
+            <th>Tempat Lahir</th>
+            <th>Tanggal Lahir</th>
+            <th>RT/RW/Dusun</th>
+            <th>desa</th>
+            <th>kecamatan</th>
+            <th>kabupaten</th>
+            <th>provinsi</th>
+            <th>golongan_darah</th>
+            <th>kode_pos</th>
+            <th>nik</th>
+            <th>no_hp</th>
+            <th>email</th>
+
+            <th sec:authorize="hasAnyAuthority('ADMIN', 'EDITOR')">Aksi</th>
+
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="product : ${listProducts}">
+            <td th:text="${product.id}">ID</td>
+            <td th:text="${product.nama_lengkap}">nama_lengkap</td>
+            <td th:text="${product.tempat_lahir}">tempat_lahir</td>
+            <td th:text="${product.tenggal_lahir}">tenggal_lahir</td>
+            <td th:text="${product.RT_RW_Dusun}">RT_RW_Dusun</td>
+            <td th:text="${product.desa}">desa</td>
+            <td th:text="${product.kecamatan}">kecamatan</td>
+            <td th:text="${product.kabupaten}">kabupaten</td>
+            <td th:text="${product.provinsi}">provinsi</td>
+            <td th:text="${product.golongan_darah}">golongan_darah</td>
+            <td th:text="${product.kode_pos}">kode_pos</td>
+            <td th:text="${product.nik}">nik</td>
+            <td th:text="${product.no_hp}">no_hp</td>
+            <td th:text="${product.email}">email</td>
+
+            <td sec:authorize="hasAnyAuthority('ADMIN', 'EDITOR')">
+                <a th:href="@{'/edit/' + ${product.id}}">Edit</a>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <a sec:authorize="hasAuthority('ADMIN')" th:href="@{'/delete/' + ${product.id}}">Hapus</a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
